@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 4,
   "name": "백준허브(BaekjoonHub)",
   "description": "Automatically integrate your BOJ submissions to GitHub",
   "homepage_url": "https://github.com/BaekjoonHub/BaekjoonHub",
@@ -38,7 +38,8 @@
     "https://github.com/",
     "https://swexpertacademy.com/",
     "https://solved.ac/api/v3/*",
-    "https://level.goorm.io/"
+    "https://level.goorm.io/",
+    "https://softeer.ai/"
   ],
   "web_accessible_resources": [
     {
@@ -157,6 +158,28 @@
         "scripts/goormlevel/parsing.js",
         "scripts/goormlevel/uploadfunctions.js",
         "scripts/goormlevel/goormlevel.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://softeer.ai/practice/*"
+      ],
+      "css": [
+        "css/softeer/inject.css"
+      ],
+      "js": [
+        "library/sha1.min.js",
+        "scripts/util.js",
+        "scripts/Github.js",
+        "scripts/authorize.js",
+        "scripts/storage.js",
+        "scripts/enable.js",
+        "scripts/softeer/variables.js",
+        "scripts/softeer/util.js",
+        "scripts/softeer/parsing.js",
+        "scripts/softeer/uploadfunctions.js",
+        "scripts/softeer/softeer.js"
       ],
       "run_at": "document_idle"
     }
